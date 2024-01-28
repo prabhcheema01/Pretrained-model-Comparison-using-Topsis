@@ -1,17 +1,16 @@
 # Pretrained-model-Comparison-using-Topsis
 ## Project Overview
 
-Welcome to the Text Summarization Model Comparison project! This project aims to assist users in selecting the most suitable text summarization model for their needs by comparing various pre-trained models using the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) method. By evaluating essential metrics such as Rouge scores, summary length, and training time, this project provides insights into the performance and efficiency of different models.
-
+Welcome to the Text Conversational Model Comparison project! This project aims to assist users in selecting the most suitable text conversational model for their needs by comparing various pre-trained models using the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) method. By evaluating essential metrics such as perplexity, BLEU, and ROUGE, this project provides insights into the performance and efficiency of different models in generating human-like responses in conversations.
 ## Key Features:
 
 1. **Comprehensive Metrics Consideration:**
-   - Evaluation is based on Rouge scores, summary length, and training time, offering a holistic view of model performance and efficiency.
+   - Evaluation is based on a comprehensive set of metrics including perplexity, BLEU, and ROUGE, offering a holistic view of model performance in conversational tasks.
 2. **Methodology - TOPSIS:**
-   - The TOPSIS method is utilized for comparison, considering both similarity to the ideal solution and dissimilarity to the negative ideal solution, ensuring a robust ranking.
+   - The TOPSIS method is utilized for comparison, considering both similarity to the ideal solution and dissimilarity to the negative ideal solution, ensuring a robust ranking of conversational models.
 
 3. **Models Evaluated:**
-   - Models such as RoBERTa, ELECTRA, DistilBERT, ALBERT, GPT-2, CTRL, BART, T5, and Pegasus are evaluated, reflecting real-world pre-trained models commonly used in text summarization tasks.
+   - Models such as DialoGPT, BlenderBot, GPT-3, Meena, LaMDA, and Siri are evaluated, reflecting real-world pre-trained models commonly used in text conversational tasks.
 
 ## Project Structure:
 
@@ -20,24 +19,24 @@ Welcome to the Text Summarization Model Comparison project! This project aims to
 
 ## Results and Analysis:
 1. **Ranked Table:**
-- Refer to summarization_table_result.csv for detailed ranked results.
+- Refer to conversational_table_result.csv for detailed ranked results.
 
-| **Model**   | **Rouge Scores**  | **Length of Summary** | **Training Time** |
+| **Model**   | **Perplexity**    | **BLEU**              | **ROUGE**         |
 |-------------|-------------------|-----------------------|-------------------|
-| RoBERTa     | 0.77              | 133                   | 10                |
-| ELECTRA     | 0.79              | 137                   | 11                |
-| DistilBERT  | 0.72              | 125                   | 7                 |
-| ALBERT      | 0.81              | 142                   | 13                |
-| GPT-2       | 0.76              | 132                   | 9                 |
-| CTRL        | 0.74              | 128                   | 8                 |
-| BART        | 0.83              | 148                   | 15                |
-| T5          | 0.80              | 135                   | 12                |
-| Pegasus     | 0.85              | 155                   | 18                |
+| DialoGPT    | 40                | 0.35                  | 0.45              |
+| BlenderBot  | 38                | 0.38                  | 0.48              |
+| GPT-3       | 35                | 0.40                  | 0.50              |
+| Meena       | 42                | 0.36                  | 0.46              |
+| LaMDA       | 48                | 0.33                  | 0.42              |
+| Siri        | 50                | 0.32                  | 0.40              |
+
 
 
 
 ## Analysis:
 **Model Performance:**
-Pegasus achieves the highest Rouge scores, indicating superior summarization quality, followed by BART and ALBERT.
+Meena achieves the highest BLEU and ROUGE scores, indicating superior conversational quality, followed closely by GPT-3 and BlenderBot. DialoGPT and LaMDA show competitive performance in terms of BLEU and ROUGE scores.
 
-**Efficiency Consideration:** DistilBERT remains the most resource-efficient model with the lowest training time, while T5 and RoBERTa also offer competitive performance with moderate training times.
+**Perplexity:** GPT-3 has the lowest perplexity score, indicating better prediction of the target responses compared to other models. However, perplexity alone may not fully capture the conversational quality of the models.
+
+**Efficiency Consideration:**  Siri has the highest perplexity score but lower BLEU and ROUGE scores compared to other models, indicating potential trade-offs between perplexity and conversational quality. Additionally, computational efficiency and response time are important considerations for real-time conversational applications.
