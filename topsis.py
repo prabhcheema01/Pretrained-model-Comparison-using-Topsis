@@ -5,18 +5,18 @@ import numpy as np
 data = pd.read_csv('data.csv')
 
 # Extract relevant columns
-rouge_scores = data['Rouge_Scores'].values
-length_of_summary = data['Length_of_Summary'].values
-training_time = data['Training_Time'].values
+perplexity = data['Perplexity'].values
+bleu_scores = data['BLEU'].values
+rouge_scores = data['ROUGE'].values
 
 # Define weights for each parameter
-weights = np.array([0.5, 0.4, 0.3])  # Adjusted weights
+weights = np.array([0.4, 0.3, 0.3])  # Adjusted weights
 
 # Normalize the matrix
 normalized_matrix = np.column_stack([
-    rouge_scores / np.max(rouge_scores),
-    1 - (length_of_summary / np.max(length_of_summary)),
-    1 - (training_time / np.max(training_time))
+    1 - (perplexity / np.max(perplexity)),
+    bleu_scores / np.max(bleu_scores),
+    rouge_scores / np.max(rouge_scores)
 ])
 
 # Calculate the weighted normalized decision matrix
